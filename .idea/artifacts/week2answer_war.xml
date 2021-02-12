@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="week2answer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>week2answer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="week2answer-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="week2answer:war exploded" />
+    </root>
+  </artifact>
+</component>

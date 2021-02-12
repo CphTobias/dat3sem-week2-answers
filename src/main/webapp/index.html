@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="flex-center">
+            <h1 class="header">Uge 2 svar</h1>
+        </div>
+        <hr>
+        <main class="grid-1-2">
+            <div class="flex-sb">
+              <div>
+                  <h2>Http protocol v1</h2>
+                  <ul>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-1/index1.html">Index1</a>
+                      </li>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-1/Ups">Ups error page</a>
+                      </li>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-1/outputheader">Header output</a>
+                      </li>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-1/redirect">Redirect</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2>Http protocol v2</h2>
+                  <ul>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-2/">Index</a>
+                      </li>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-2/SessionDemo">Sessions</a>
+                      </li>
+                      <li>
+                          <a href="https://tobias-z.com/http-protocol-2/CookieDemo">Persistent Cookies</a>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="flex-text">
+              <h2>Svar</h2>
+              <p>
+                1. På en ny side får man status kode 200. Men hvis du reloader får man 304, fordi den ligger i din cache, så bliver man bare redirected.
+              </p>
+              <p>2. Både billedet og style sheetet bliver hentet ved reload. Hvor de virker på samme måde, ved at blive serveret ved memory cache efter et reload. I både response of request headeren kan der ses en connection header. Denne header siger “keep-alive” hvilket nok er grunden til at vi kan bruge memory cachen til at hente noget vi allerede har downloadet før.</p>
+              <p>3. Når man bliver redirected køre vi igennem redirect servletten, som redirector til r.html. Dette giver os en 302 status kode</p>
+              <p>a) Jeg gik ind på http og bliv redirected til https (80 - 443)</p>
+              <p>4. HTTP Status 500 - Internal server error</p>
+              <p>5. HTTP Status 404 - Not Found (The requested resource is not available)</p>
+              <p>6. Explain status codes:</p>
+              <p>a) 2xx = Success</p>
+              <p>b) 3xx = Redirection</p>
+              <p>3. 4xx = Client error</p>
+              <p>4. 5xx = Server error</p>
+              <p>7. Post parameters are passed in the header, inside the “Form Data”. Get parameters are passed in the url</p>
+              <p>
+                8. I mine cookies findes der en JSESSIONID cookie som indeholder alt den data som vi nu sætter på den. Når der bliver lavet et request, sender vi også cookien med:
+                Cookie: JSESSIONID=B415AB19B366849180CD7FFDD84978B0
+              </p>
+              <p>9. Første gang jeg skrev mit navn blev der sendt en “Set-Cookie” tilbage i responset.</p>
+              <p>1. Vi kan sætte en cookie på en klient i lige så lang tid vi vil. Denne cookie bliver gemt hos klienten, så vil den samme klient kommer tilbage, vil den kendte cookie blive sendt med til serveren.</p>
+            </div>
+        </main>
+    </body>
+</html>
